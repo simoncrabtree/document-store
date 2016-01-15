@@ -1,10 +1,7 @@
-var http = require('http'),
-url = require('url'),
-fs = require('fs');
-
-var azure = require('azure-storage')
+var http = require('http');
+var url = require('url');
+var azure = require('azure-storage');
 var blobSvc = azure.createBlobService();
-var blobName = process.argv[2];
 
 http.createServer(function (req, res) {
 	var query = url.parse(req.url, true).query;
